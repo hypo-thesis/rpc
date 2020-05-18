@@ -1,38 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  font-size: 100%;
+  font-family: 'Fredoka One', cursive;
+ }
+
+ .All {
+   background-color: #000000;
+ }
+
+.up {
+  display:grid;
+  grid-template-columns: repeat(7 , 1fr);
+  background-color: #264653;
+  justify-content: end;
+}
+
+.Header {
+  grid-column: 3/6;
+  border:1px solid seashell;
+  padding : 10px;
+  margin-top: 5vh;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: space-between;
+  min-width: 200px;
+}
+
+.Logo{
+  padding: 10px
+}
+
+.Score {
+  grid-column: 2/span 1;
+  width: 11vw;
+  height: auto;
+  background-color: seashell;
+  border:2px solid black;
+  border-radius: 22px;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  position: relative;
+}
+
+.Score span {
+ grid-column: 2/3;
+text-align: center;
+}
+.Score span h1 {
+  font-size: 2.2rem;
+}
+
 .App {
+  height: 100vh;
+  width : 100%;
+  display: grid;
+  grid-template-columns: repeat(7 , 1fr );
+  grid-template-rows: repeat(8 , 1fr);
+  position: absolute;
+  background-color: #264653;
+}
+
+
+.Rock {
+grid-column: 4/5;
+grid-row: 4/5;
+z-index: 1;
+background: #ffffff;
+border: 10px solid #2a9d8f;
+border-radius: 50%;
+box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+height: 5em;
+width: 5em;
+}
+.Scissors {
+  grid-column: 4/5;
+  grid-row: 4/5;
+  z-index: 1;
+  justify-self: end;
+  background: #ffffff;
+  border: 10px solid #e9c46a;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 5em;
+  width: 5em;
+  }
+.Paper {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    z-index: 1;
+    align-self: end;
+    justify-self: center;
+    background: #ffffff;
+    border: 10px solid #e76f51;
+    border-radius: 50%;
+    box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+    height: 5em;
+    width: 5em;
+  }
+.Triangle {
+  padding: 22px;
+  grid-column: 4/5;
+  grid-row: 4/5;
+  align-self: center;
+  justify-self: center;
+  z-index: 0;
+}
+
+.Rock img {
+  padding-top: 21%;
+  padding-left: 18%;
+}
+.Scissors img {
+  padding-top: 15%;
+  padding-left: 18%;
+}
+.Paper img {
+  padding-top: 15%;
+  padding-left: 18%;
+}
+
+.picked {
+  justify-self: center;
+  align-self: center;
+  grid-column: 3/4;
+  grid-row: 3;
+  background: #ffffff;
+  border: 10px solid #e76f51;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 5em;
+  width: 5em;
+}
+.status{
+  display: grid;
+  grid-template-rows: 2fr;
+  justify-self: center;
+  align-self: center;
+  grid-column: 4/5;
+  grid-row: 3;
+}
+
+.winloss{
+  grid-row: 1;
+  font-size: 2rem;
+  color: aliceblue;
+  text-shadow: #FC0 1px 0 10px;
+  z-index: 10;
+}
+.playagain{
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  align-self: start;
   text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid;
+}
+.playagain button {
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.house{
+  justify-self: center;
+  align-self: center;
+  grid-column: 5/6;
+  grid-row: 3;
+  background: #ffffff;
+  border: 10px solid #2a9d8f;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 5em;
+  width: 5em; 
+  left: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.picked img {
+  padding-top: 15%;
+  padding-left: 18%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.house img {
+  padding-top: 15%;
+  padding-left: 18%;
 }
