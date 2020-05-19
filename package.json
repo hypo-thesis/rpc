@@ -1,6 +1,7 @@
 {
   "name": "rps",
-  "version": "0.1.0",
+  "homepage": "http://tehran.uk.to/rpc",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@risingstack/react-easy-state": "^6.3.0",
